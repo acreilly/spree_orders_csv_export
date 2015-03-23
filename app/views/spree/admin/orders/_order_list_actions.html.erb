@@ -1,0 +1,29 @@
+<%= form_tag('/admin/orders_list_actions', method: :post) do %>
+    <%= render_original %>
+    <h1>Export Orders to CSV</h1>
+    <p>Either check off the order's above you would like exported, or all orders will be considered selected. To narrow down the orders you would like to export, select from the fields below.</p>
+    <div id='list_state_change' class='field'>
+    <%= label_tag nil, Spree.t(:state) %>
+    <br>
+    <%= select_tag :state, options_for_select([['Choose State', ''], ['Cart', 'cart'], ['Address', 'address'], ['Delivery', 'delivery'], ['Payment', 'payment'], ['Confirm', 'confirm'], ['Complete', 'complete']]), :class => 'select2' %>
+
+    <div id='list_payment_state_change' class='field'>
+    <%= label_tag nil, Spree.t(:payment_state) %>
+    <br>
+    <%= select_tag :payment_state, options_for_select([['Choose State', ''], ['Paid', 'paid'], ['Balance_due', 'balance_due'], ['Credit_owed', 'credit_owed'], ['Failed', 'failed']]), :class => 'select2' %>
+
+    <div id='list_shipment_state_change' class='field'>
+    <%= label_tag nil, Spree.t(:shipment_state) %>
+    <br>
+    <%= select_tag :shipment_state, options_for_select([['Choose State', ''], ['Shipped', 'shipped'], ['Partial', 'partial'], ['Ready', 'ready'], ['Backorder', 'backorder'], ['Pending', 'pending']]), :class => 'select2' %>
+    <br />
+    <br />
+    <br />
+    <%= button_tag 'Export as csv', {id: 'export_orders_btn','onclick' => '$(\"#order_action_export\").val(\"export\");'} %>
+
+  </div>
+  <%= hidden_field_tag 'order_action_export' %>
+  <%= hidden_field_tag 'order_action_state' %>
+  <%= hidden_field_tag 'order_action_payment_state' %>
+  <%= hidden_field_tag 'order_action_shipment_state' %>
+  <% end %>

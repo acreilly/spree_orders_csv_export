@@ -1,3 +1,3 @@
 Spree::Core::Engine.routes.draw do
-  # Add your extension routes here
+  post '/admin/orders_list_actions' => 'spree/orders#orders_list_actions'
 end

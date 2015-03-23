@@ -2,22 +2,21 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_orders_csv_export'
-  s.version     = '3.0.0'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
-  s.required_ruby_version = '>= 2.0.0'
+  s.version     = '2.3.0'
+  s.summary     = 'Spree orders export to csv'
+  s.description = 'Spree orders export to csv'
+  s.required_ruby_version = '>= 1.9.3'
 
-  # s.author    = 'You'
-  # s.email     = 'you@example.com'
-  # s.homepage  = 'http://www.spreecommerce.com'
+  s.author    = 'Allison Reilly'
+  s.email     = 'allison@railsdog.com'
+  s.homepage  = 'http://railsdog.com'
 
   #s.files       = `git ls-files`.split("\n")
   #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
-
-  s.add_dependency 'spree_core', '~> 3.0.0'
-
+  s.add_dependency 'spree_core', '~> 2.3.0'
+  s.add_dependency 'spree_backend', '~> 2.3.0'
   s.add_development_dependency 'capybara', '~> 2.4'
   s.add_development_dependency 'coffee-rails'
   s.add_development_dependency 'database_cleaner'
