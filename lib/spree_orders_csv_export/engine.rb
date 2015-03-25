@@ -1,6 +1,7 @@
 module SpreeOrdersCsvExport
   class Engine < Rails::Engine
     require 'spree/core'
+    require 'spree_backend'
     isolate_namespace Spree
     engine_name 'spree_orders_csv_export'
 
