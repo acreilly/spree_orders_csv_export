@@ -1,5 +1,5 @@
-Spree::OrdersController.class_eval do
-  def orders_list_actions
+Spree::Admin::BaseController.class_eval do
+def orders_list_actions
     require 'csv'
     orders_list = if params[:orders_list]
       params[:orders_list]
@@ -52,5 +52,4 @@ Spree::OrdersController.class_eval do
       flash[:error] = "No orders found!"
     end
   end
-
 end

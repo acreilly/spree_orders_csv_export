@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_orders_csv_export'
-  s.version     = '2.3.3'
+  s.version     = '2.4.3'
   s.summary     = 'Spree orders export to csv'
   s.description = 'Spree orders export to csv'
   s.required_ruby_version = '>= 1.9.3'
