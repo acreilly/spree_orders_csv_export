@@ -1,4 +1,4 @@
-<%= form_tag('/admin/orders_list_actions', method: :post) do %>
+<%= form_tag(admin_orders_list_actions_path, method: :post) do %>
     <%= render_original %>
     <h1>Export Orders to CSV</h1>
     <p>Either check off the order's above you would like exported, or all orders will be considered selected. To narrow down the orders you would like to export, select from the fields below.</p>
