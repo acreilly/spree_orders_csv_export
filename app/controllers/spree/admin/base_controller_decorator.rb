@@ -1,5 +1,5 @@
 Spree::Admin::BaseController.class_eval do
-def orders_list_actions
+  def orders_list_actions
     require 'csv'
     orders_list = if params[:orders_list]
       params[:orders_list]
