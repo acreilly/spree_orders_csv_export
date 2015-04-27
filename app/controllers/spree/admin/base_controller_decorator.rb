@@ -19,7 +19,7 @@ Spree::Admin::BaseController.class_eval do
     else
       orders
     end
-    headers = ["Order Date", "Order #", "Type", "Shipping Method", "Email", "Name", "Company", "Address 1", "Address 2", "City", "State", "Zip", "Country", "Weight (oz)", "Total Items", "Subtotal", "Handling", "Shipping", "Comments"]
+    headers = ["Order Date", "Order #", "Type", "Shipping Method", "Email", "Name", "Company", "Address 1", "Address 2", "City", "State", "Zip", "Country", "Weight (oz)", "Total Items", "Subtotal", "Handling", "Shipping", "Total", "Comments"]
     max_order_items = all_orders.map(&:line_items).map(&:size).max
     if !max_order_items.nil?
       max_order_items.times do |i|
